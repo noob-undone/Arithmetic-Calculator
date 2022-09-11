@@ -1,9 +1,8 @@
+print("Loading Modules...", end="\r")
 import os
 os.system("") # <-- To make ANSI work
-
-print("Loading Module...", end="\r")
 import decimal
-decimal.getcontext().prec = 12
+decimal.getcontext().prec = 30
 print("Loading Finished!", end="\r")
 
 history = list()
@@ -37,7 +36,7 @@ def main(equation):
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) ** decimal.Decimal(terms[2])}"
 
     if terms[1] == "r":
-        return f"{equation.strip()} = {decimal.Decimal(terms[0]) ** (1 / decimal.Decimal(terms[2]))}"
+        return f"{equation.strip()} = {decimal.Decimal(terms[0]) **  (decimal.Decimal(1) / decimal.Decimal(terms[2]))}"
 
     return "Error: Please enter an Equation!"
 
