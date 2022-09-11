@@ -1,3 +1,6 @@
+import os
+os.system("") # <-- To make ANSI work
+
 print("Loading Module...", end="\r")
 import decimal
 decimal.getcontext().prec = 12
@@ -45,7 +48,7 @@ if __name__ == "__main__":
         inp = input("Input an Problem: ")
         if not inp: break
         history.append(inp)
-        print('\033[1A', end="\x1b[2K")
+        print('\033[1A', end="\033[2K")
         print(f"{counter}.) {main(inp)}")
         counter += 1
     print("THANK YOU FOR USING THE PROGRAM!")
