@@ -1,5 +1,6 @@
 print("Loading Modules...", end="\r")
 import os
+import re
 os.system("") # <-- To make ANSI work
 import decimal
 decimal.getcontext().prec = 30
@@ -30,12 +31,14 @@ def main(equation):
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) * decimal.Decimal(terms[2])}"
 
     if terms[1] == "/":
+        if decimal.Decimal(terms[2]) == 0: return f"{equation.strip()} = undefined"
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) / decimal.Decimal(terms[2])}"
 
     if terms[1] == "^":
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) ** decimal.Decimal(terms[2])}"
 
     if terms[1] == "r":
+        if decimal.Decimal(terms[0]) < 0: return f"{equation.strip()} = {equation.strip()}"
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) **  (decimal.Decimal(1) / decimal.Decimal(terms[2]))}"
 
     return "Error: Please enter an Equation!"
