@@ -37,7 +37,7 @@ Examples:
 - ```1 / 2 ===> 1.) 1 / 2 = 0.5```
 - ```10 / 5 ===> 2.) 10 / 5 = 2```
 
-### Involution
+### Involution or Exponentiation
 Also known as using exponents. Use the ```^``` operator in between your terms.
 In typing:
 - x² is typped as ```x ^ 2```
@@ -45,15 +45,6 @@ In typing:
 More Examples:
 - ```9² or 9 ^ 2 ===> 1.) 9 ^ 2 = 81```
 - ```9³ or 3 ^ 3 ===> 2.) 3 ^ 3 = 27```
-
-### Evolution
-Also known as finding the root. Use the ```r``` operator in between your terms.
-In typing:
-- √x is typped as ```x r 2```
-
-Examples:
-- ```9 r 2 ===> 1.) 9 r 2 = 3```
-- ```1000 r 3 ===> 2.) 1000 r 3 = 9.99999999999999999999999999998``` This error is due to a problem in compuing which can't be easily solved.
 
 ## How it Works
 Coming Soon!

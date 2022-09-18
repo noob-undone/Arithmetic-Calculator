@@ -21,25 +21,35 @@ def main(equation):
     terms = equation.split()
     if len(terms) > 3 or len(terms) < 3: return "Please retype your problem :(. Error Type: Term Length." 
 
-    if terms[1] == "+":
-        return f"{equation.strip()} = {decimal.Decimal(terms[0]) + decimal.Decimal(terms[2])}"
+    # Exponentiation
+    if terms[1] == "^":
+        return f"{equation.strip()} = {decimal.Decimal(terms[0]) ** decimal.Decimal(terms[2])}"
 
-    if terms[1] == "-":
-        return f"{equation.strip()} = {decimal.Decimal(terms[0]) - decimal.Decimal(terms[2])}"
+    # Root Extraction - Removed due to precision issues :(
+    # if terms[1] == "r":
+    #     if decimal.Decimal(terms[0]) < 0: return f"{equation.strip()} = {equation.strip()}"
+    #     return f"{equation.strip()} = {decimal.Decimal(terms[0]) **  (decimal.Decimal(1) / decimal.Decimal(terms[2]))}"
 
+    # Multiplication
     if terms[1] == "*":
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) * decimal.Decimal(terms[2])}"
 
+    # Division
     if terms[1] == "/":
         if decimal.Decimal(terms[2]) == 0: return f"{equation.strip()} = undefined"
         return f"{equation.strip()} = {decimal.Decimal(terms[0]) / decimal.Decimal(terms[2])}"
 
-    if terms[1] == "^":
-        return f"{equation.strip()} = {decimal.Decimal(terms[0]) ** decimal.Decimal(terms[2])}"
+    # Modulo
+    if terms[1] == "%":
+        return f"{equation.strip()} = {decimal.Decimal(terms[0]) % decimal.Decimal(terms[2])}"
 
-    if terms[1] == "r":
-        if decimal.Decimal(terms[0]) < 0: return f"{equation.strip()} = {equation.strip()}"
-        return f"{equation.strip()} = {decimal.Decimal(terms[0]) **  (decimal.Decimal(1) / decimal.Decimal(terms[2]))}"
+    # Addition
+    if terms[1] == "+":
+        return f"{equation.strip()} = {decimal.Decimal(terms[0]) + decimal.Decimal(terms[2])}"
+
+    # Subtraction
+    if terms[1] == "-":
+        return f"{equation.strip()} = {decimal.Decimal(terms[0]) - decimal.Decimal(terms[2])}"
 
     return "Error: Please enter an Equation!"
 
@@ -48,7 +58,7 @@ if __name__ == "__main__":
     counter = 1
     while True:
         inp = input("Input an Problem: ")
-        if not inp: break
+        if inp == "END": break
         history.append(inp)
         print('\033[1A', end="\033[2K")
         print(f"{counter}.) {main(inp)}")
