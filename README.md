@@ -1,4 +1,4 @@
-# The Arithmetic Calculator by Noob Undone v1
+# The Arithmetic Calculator by Noob Undone v1.2
 ##### This is a basic calculator that can solve addition, subtraction, multiplication, division, involutuon(exponents), and evolution(roots).
 ## How to use it
 ### Syntax
