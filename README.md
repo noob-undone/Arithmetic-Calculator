@@ -37,6 +37,12 @@ Examples:
 - ```1 / 2 ===> 1.) 1 / 2 = 0.5```
 - ```10 / 5 ===> 2.) 10 / 5 = 2```
 
+### Modulo
+Use the ```%``` operator to find the remainder of the given terms.
+Examples:
+- ```1 / 2 ===> 1.) 1 / 2 = 0.5```
+- ```10 / 5 ===> 2.) 10 / 5 = 2```
+
 ### Involution or Exponentiation
 Also known as using exponents. Use the ```^``` operator in between your terms.
 In typing:
