@@ -1,6 +1,5 @@
 print("Loading Modules...", end="\r")
 import os
-import re
 os.system("") # <-- To make ANSI work
 import decimal
 decimal.getcontext().prec = 30
